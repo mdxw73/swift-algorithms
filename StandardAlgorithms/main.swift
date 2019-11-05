@@ -13,5 +13,3 @@ print("Hello, World!")
 let name = "Zack Obied"
 
 print(name)
-
-//this is a comment
