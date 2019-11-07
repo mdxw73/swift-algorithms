@@ -65,9 +65,12 @@ class SortingTest: XCTestCase {
         }
     }
     
-    func testBubbleSortPermormance () {
+    func testBubbleSortPermormanceForFiveTerms() {
         //arrange
-        let data = [456, 300, 3, 1, 5, 4]
+        var data = [Int]()
+        for _ in 1...5 {
+            data.append(Int.random(in: 1...100))
+        }
         let sorting = Sorting()
         
         //act
@@ -76,9 +79,40 @@ class SortingTest: XCTestCase {
         }
     }
     
-    func testMergeSortPermormance () {
+    func testBubbleSortPermormanceForFiftyTerms() {
         //arrange
-        let data = [456, 300, 3, 1, 5, 4]
+        var data = [Int]()
+        for _ in 1...50 {
+            data.append(Int.random(in: 1...100))
+        }
+        let sorting = Sorting()
+        
+        //act
+        measure {
+            sorting.bubbleSort(data: data)
+        }
+    }
+    
+    func testBubbleSortPermormanceForFiveHundredTerms() {
+        //arrange
+        var data = [Int]()
+        for _ in 1...500 {
+            data.append(Int.random(in: 1...100))
+        }
+        let sorting = Sorting()
+        
+        //act
+        measure {
+            sorting.bubbleSort(data: data)
+        }
+    }
+    
+    func testMergeSortPermormanceForFiveTerms() {
+        //arrange
+        var data = [Int]()
+        for _ in 1...5 {
+            data.append(Int.random(in: 1...100))
+        }
         let sorting = Sorting()
         
         //act
@@ -86,5 +120,61 @@ class SortingTest: XCTestCase {
             sorting.mergeSort(data: data)
         }
     }
-
+    
+    func testMergeSortPerformanceForFiftyTerms() {
+        //arrange
+        var data = [Int]()
+        for _ in 1...50 {
+            data.append(Int.random(in: 1...100))
+        }
+        let sorting = Sorting()
+        
+        //act
+        measure {
+            sorting.mergeSort(data: data)
+        }
+    }
+    
+    func testMergeSortPerformanceForFiveHundredTerms() {
+        //arrange
+        var data = [Int]()
+        for _ in 1...50 {
+            data.append(Int.random(in: 1...100))
+        }
+        let sorting = Sorting()
+        
+        //act
+        measure {
+            sorting.mergeSort(data: data)
+        }
+    }
+    
+    func testQuickSortWithMultipleIntegerArraysReturnsSortedIntegerArrays() {
+        //arrange
+        let sorting = Sorting()
+        let testCases = [(input: [10, 3, 2, 7, 1], expected: [1, 2, 3, 7, 10]),
+                         (input: [456, 300, 3, 1, 5, 4], expected: [1, 3, 4, 5, 300, 456])]
+        
+        //act
+        //assert
+        for testCase in testCases {
+            let actual = sorting.quickSort(data: testCase.input)
+            XCTAssertEqual(actual, testCase.expected)
+        }
+    }
+    
+    func testInsertionSortWithMultipleIntegerArraysReturnsSortedIntegerArrays() {
+        //arrange
+        let sorting = Sorting()
+        let testCases = [(input: [10, 3, 2, 7, 1], expected: [1, 2, 3, 7, 10]),
+                         (input: [456, 300, 3, 1, 5, 4], expected: [1, 3, 4, 5, 300, 456])]
+        
+        //act
+        //assert
+        for testCase in testCases {
+            let actual = sorting.insertionSort(data: testCase.input)
+            XCTAssertEqual(actual, testCase.expected)
+        }
+    }
+    
 }

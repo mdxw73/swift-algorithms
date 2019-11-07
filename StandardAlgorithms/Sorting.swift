@@ -9,13 +9,14 @@
 import Foundation
 
 class Sorting {
+    
     func bubbleSort(data: [Int]) -> [Int] {
         var array = data
         var swaps = true
         var temp = Int()
         while swaps == true {
           swaps = false
-          for i in 0...array.count - 2 {
+          for i in 0 ... array.count - 2 {
             if array[i] > array[i + 1] {
               temp = array[i]
               array[i] = array[i + 1]
@@ -63,4 +64,41 @@ class Sorting {
             return merge(left: left, right: right)
         }
     }
+    
+    func quickSort(data: [Int]) -> [Int] {
+        if data.count <= 1 {
+            return data
+        } else {
+            let pivot = data[0]
+            var left = [Int]()
+            var right = [Int]()
+            var sortedArray = [Int]()
+            for i in 1 ..< data.count {
+                if data[i] > pivot {
+                    right.append(data[i])
+                } else {
+                    left.append(data[i])
+                }
+            }
+            sortedArray.append(contentsOf: quickSort(data: left))
+            sortedArray.append(pivot)
+            sortedArray.append(contentsOf: quickSort(data: right))
+            return sortedArray
+        }
+    }
+    
+    func insertionSort(data: [Int]) -> [Int] {
+        var array = data
+        for i in 1 ..< array.count {
+          let temp = array[i]
+          var j = i - 1
+          while j >= 0 && array[j] > temp {
+            array[j + 1] = array[j]
+            j -= 1
+          }
+          array[j + 1] = temp
+        }
+        return array
+    }
+    
 }
