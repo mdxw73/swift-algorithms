@@ -50,7 +50,7 @@ print("Output: \(searching.linearSearch(data: data, number: number))\n")
 
 print("Binary Search:")
 print("Description: takes the middle item, checks if it is smaller/bigger/equal to the input. If it is bigger the process is repeated on the elements below the midpoint; if it's smaller the process is repeated on the elements above the midpoint; once the midpoint is equal to the input or the lower and upper bounds surpass one another: the program ends.")
-print("Precondition: Only works on sorted list")
+print("Precondition: Only works on sorted lists.")
 print("Big O time complexity: Best: O(1), Average: O(log(n)), Worst: O(log(n))")
 print("Big O space complexity: Best: O(1), Average: O(1), Worst: O(1)")
 print("Input: \(sorting.insertionSort(data: data)), Input: \(number)")

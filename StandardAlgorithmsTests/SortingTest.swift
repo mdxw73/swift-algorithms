@@ -50,11 +50,11 @@ class SortingTest: XCTestCase {
         }
     }
     
-    func testMergeWithIntegerArrayLengthOneAndSortedIntegerArrayLengthManyReturnsSortedIntegerArrays() {
+    func testMergeWithTwoSortedIntegerArraysReturnsOneSortedIntegerArrayForMultipleIntegerArrays() {
         //arrange
         let sorting = Sorting()
-        let testCases = [(input1: [1, 5], input2: [4], expected: [1, 4, 5]),
-                         (input1: [3], input2: [1], expected: [1, 3])]
+        let testCases = [(input1: [1, 5, 7, 8], input2: [2, 4, 6, 9], expected: [1, 2, 4, 5, 6, 7, 8, 9]),
+                         (input1: [3, 12, 16, 17, 20], input2: [1, 12, 13, 15, 18], expected: [1, 3, 12, 12, 13, 15, 16, 17, 18, 20])]
         
         //act
         //assert
