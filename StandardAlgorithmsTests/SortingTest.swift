@@ -68,8 +68,8 @@ class SortingTest: XCTestCase {
     func testBubbleSortPermormanceForFiveTerms() {
         //arrange
         var data = [Int]()
-        for _ in 1...5 {
-            data.append(Int.random(in: 1...100))
+        for _ in 1 ... 5 {
+            data.append(Int.random(in: 1 ... 100))
         }
         let sorting = Sorting()
         
@@ -82,8 +82,8 @@ class SortingTest: XCTestCase {
     func testBubbleSortPermormanceForFiftyTerms() {
         //arrange
         var data = [Int]()
-        for _ in 1...50 {
-            data.append(Int.random(in: 1...100))
+        for _ in 1 ... 50 {
+            data.append(Int.random(in: 1 ... 100))
         }
         let sorting = Sorting()
         
@@ -96,8 +96,8 @@ class SortingTest: XCTestCase {
     func testBubbleSortPermormanceForFiveHundredTerms() {
         //arrange
         var data = [Int]()
-        for _ in 1...500 {
-            data.append(Int.random(in: 1...100))
+        for _ in 1 ... 500 {
+            data.append(Int.random(in: 1 ... 100))
         }
         let sorting = Sorting()
         
@@ -110,8 +110,8 @@ class SortingTest: XCTestCase {
     func testMergeSortPermormanceForFiveTerms() {
         //arrange
         var data = [Int]()
-        for _ in 1...5 {
-            data.append(Int.random(in: 1...100))
+        for _ in 1 ... 5 {
+            data.append(Int.random(in: 1 ... 100))
         }
         let sorting = Sorting()
         
@@ -124,8 +124,8 @@ class SortingTest: XCTestCase {
     func testMergeSortPerformanceForFiftyTerms() {
         //arrange
         var data = [Int]()
-        for _ in 1...50 {
-            data.append(Int.random(in: 1...100))
+        for _ in 1 ... 50 {
+            data.append(Int.random(in: 1 ... 100))
         }
         let sorting = Sorting()
         
@@ -138,8 +138,8 @@ class SortingTest: XCTestCase {
     func testMergeSortPerformanceForFiveHundredTerms() {
         //arrange
         var data = [Int]()
-        for _ in 1...50 {
-            data.append(Int.random(in: 1...100))
+        for _ in 1 ... 50 {
+            data.append(Int.random(in: 1 ... 100))
         }
         let sorting = Sorting()
         
@@ -174,6 +174,90 @@ class SortingTest: XCTestCase {
         for testCase in testCases {
             let actual = sorting.insertionSort(data: testCase.input)
             XCTAssertEqual(actual, testCase.expected)
+        }
+    }
+    
+    func testQuickSortPermormanceForFiveTerms() {
+        //arrange
+        var data = [Int]()
+        for _ in 1 ... 5 {
+            data.append(Int.random(in: 1 ... 100))
+        }
+        let sorting = Sorting()
+        
+        //act
+        measure {
+            sorting.quickSort(data: data)
+        }
+    }
+    
+    func testQuickSortPerformanceForFiftyTerms() {
+        //arrange
+        var data = [Int]()
+        for _ in 1 ... 50 {
+            data.append(Int.random(in: 1 ... 100))
+        }
+        let sorting = Sorting()
+        
+        //act
+        measure {
+            sorting.quickSort(data: data)
+        }
+    }
+    
+    func testQuickSortPerformanceForFiveHundredTerms() {
+        //arrange
+        var data = [Int]()
+        for _ in 1 ... 500 {
+            data.append(Int.random(in: 1 ... 100))
+        }
+        let sorting = Sorting()
+        
+        //act
+        measure {
+            sorting.quickSort(data: data)
+        }
+    }
+    
+    func testInsertionSortPermormanceForFiveTerms() {
+        //arrange
+        var data = [Int]()
+        for _ in 1 ... 5 {
+            data.append(Int.random(in: 1 ... 100))
+        }
+        let sorting = Sorting()
+        
+        //act
+        measure {
+            sorting.insertionSort(data: data)
+        }
+    }
+    
+    func testInsertionSortPerformanceForFiftyTerms() {
+        //arrange
+        var data = [Int]()
+        for _ in 1 ... 50 {
+            data.append(Int.random(in: 1 ... 100))
+        }
+        let sorting = Sorting()
+        
+        //act
+        measure {
+            sorting.insertionSort(data: data)
+        }
+    }
+    
+    func testInsertionSortPerformanceForFiveHundredTerms() {
+        //arrange
+        var data = [Int]()
+        for _ in 1 ... 500 {
+            data.append(Int.random(in: 1 ... 100))
+        }
+        let sorting = Sorting()
+        
+        //act
+        measure {
+            sorting.insertionSort(data: data)
         }
     }
     
