@@ -3,7 +3,7 @@
 //  StandardAlgorithms
 //
 //  Created by Zack Obied on 05/11/2019.
-//  Copyright © 2019 Obied, Zack (NA). All rights reserved.
+//  Copyright © 2019 Zack Obied. All rights reserved.
 //
 
 import Foundation
