@@ -30,7 +30,7 @@ print("Output: \(sorting.mergeSort(data: data))\n")
 print("Quick Sort:")
 print("Description: Takes the first element as a pivot and creates two arrays: one of bigger elements and one of smaller elements than the pivot. It repeats this recursively on the pivot of each sublist until each sublist has just one element. It then appends the elements in order to a new array.")
 print("Big O time complexity: Best: O(n log(n)), Average: O(n log(n)), Worst: O(n^2)")
-print("Big O space complexity: Best: O(n log(n)), Average: O(n log(n)), Worst: O(n log(n))")
+print("Big O space complexity: Best: O(log(n)), Average: O(log(n)), Worst: O(log(n))")
 print("Input: \(data)")
 print("Output: \(sorting.quickSort(data: data))\n")
 
