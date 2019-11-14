@@ -21,24 +21,20 @@ class Unknown {
     }
     
     func findMode(data: [Int]) -> Int {
-        var count = 1
+        var count = 0
         var countArray = [Int]()
         for i in 0 ..< data.count {
             for j in 0 ..< data.count {
-                if  i == j {
-                    continue
-                } else {
-                    if data[i] == data[j] {
-                        count += 1
-                    }
+                if data[i] == data[j] {
+                    count += 1
                 }
             }
             countArray.append(count)
-            count = 1
+            count = 0
         }
         var holder = 0
-        for i in 0 ..< countArray.count {
-            if countArray[i] > data[holder] {
+        for i in 1 ..< countArray.count {
+            if countArray[i] > countArray[holder] {
                 holder = i
             }
         }
@@ -47,19 +43,19 @@ class Unknown {
     
     func secondSmallest(data: [Int]) -> Int {
         var holder = 0
-        for i in 0 ..< data.count {
+        for i in 1 ..< data.count {
             if data[i] < data[holder] {
                 holder = i
             }
         }
         var holder2 = Int()
-        if 0 == holder {
+        if holder == 0 {
             holder2 = 1
         } else {
             holder2 = 0
         }
         for i in 0 ..< data.count {
-            if data[i] < data[holder2] && holder != i{
+            if data[i] < data[holder2] && holder != i {
                 holder2 = i
             }
         }
@@ -69,6 +65,12 @@ class Unknown {
     func extract(data: String) -> String {
         let end = data.lastIndex(of: ".")!
         var domain = String(data[..<end])
+        
+        if data.hasSuffix(".co.uk") {
+            let end = domain.lastIndex(of: ".")!
+            domain = String(data[..<end])
+        }
+        
         let start = domain.lastIndex(of: ".")!
         domain = String(domain[start...])
         domain = String(domain.dropFirst(1))

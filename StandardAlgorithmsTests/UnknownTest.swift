@@ -28,8 +28,8 @@ class UnknownTest: XCTestCase {
     func testFindModeReturnsModeOfMultipleIntegerArrays() {
         //arrange
         let unknown = Unknown()
-        let testCases = [(input: [1, 7, 9, 8, 4, 7], expected: 7),
-                         (input: [12, 21, 322, 322, 812, 12, 4, 12], expected: 12)]
+        let testCases = [(input: [1, 4, 7, 9, 9, 12, 15], expected: 9),
+                         (input: [1, 7, 9, 8, 4, 7, 1, 1], expected: 1)]
         
         //act
         //assert
@@ -58,7 +58,7 @@ class UnknownTest: XCTestCase {
         let unknown = Unknown()
         let testCases = [(input: "www.google.com", expected: "google"),
                          (input: "www.mail.support.google.com", expected: "google"),
-                         (input: "www.amazon.com", expected: "amazon")]
+                         (input: "www.amazon.co.uk", expected: "amazon")]
 
         //act
         //assert
