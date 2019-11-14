@@ -53,19 +53,19 @@ class UnknownTest: XCTestCase {
         }
     }
     
-//    func testExtractReturnsDomainNameOfURL() {
-//        //arrange
-//        let unknown = Unknown()
-//        let testCases = [(input: "www.google.com", expected: "google"),
-//                         (input: "mail.support.google.com", expected: "google"),
-//                         (input: "www.amazon.com", expected: "amazon")]
-//
-//        //act
-//        //assert
-//        for testCase in testCases {
-//            let actual = unknown.extract(data: testCase.input)
-//            XCTAssertEqual(actual, testCase.expected)
-//        }
-//    }
+    func testExtractReturnsDomainNameOfURL() {
+        //arrange
+        let unknown = Unknown()
+        let testCases = [(input: "www.google.com", expected: "google"),
+                         (input: "www.mail.support.google.com", expected: "google"),
+                         (input: "www.amazon.com", expected: "amazon")]
+
+        //act
+        //assert
+        for testCase in testCases {
+            let actual = unknown.extract(data: testCase.input)
+            XCTAssertEqual(actual, testCase.expected)
+        }
+    }
     
 }

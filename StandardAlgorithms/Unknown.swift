@@ -66,18 +66,13 @@ class Unknown {
         return data[holder2]
     }
     
-//    func extract(data: String) -> String {
-//        let end = data.lastIndex(of: ".")!
-//        var domain = String(data[...end])
-//        domain = String(domain.dropLast(1))
-//
-//        for character in domain {
-//            while character != "." {
-//                domain = String(domain.dropFirst(1))
-//            }
-//        }
-//        domain = String(domain.dropFirst(1))
-//        return domain
-//    }
+    func extract(data: String) -> String {
+        let end = data.lastIndex(of: ".")!
+        var domain = String(data[..<end])
+        let start = domain.lastIndex(of: ".")!
+        domain = String(domain[start...])
+        domain = String(domain.dropFirst(1))
+        return domain
+    }
     
 }
