@@ -75,7 +75,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.bubbleSort(data: data)
+            _ = sorting.bubbleSort(data: data)
         }
     }
     
@@ -89,7 +89,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.bubbleSort(data: data)
+            _ = sorting.bubbleSort(data: data)
         }
     }
     
@@ -103,7 +103,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.bubbleSort(data: data)
+            _ = sorting.bubbleSort(data: data)
         }
     }
     
@@ -117,7 +117,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.mergeSort(data: data)
+            _ = sorting.mergeSort(data: data)
         }
     }
     
@@ -131,7 +131,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.mergeSort(data: data)
+            _ = sorting.mergeSort(data: data)
         }
     }
     
@@ -145,7 +145,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.mergeSort(data: data)
+            _ = sorting.mergeSort(data: data)
         }
     }
     
@@ -187,7 +187,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.quickSort(data: data)
+            _ = sorting.quickSort(data: data)
         }
     }
     
@@ -201,7 +201,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.quickSort(data: data)
+            _ = sorting.quickSort(data: data)
         }
     }
     
@@ -215,7 +215,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.quickSort(data: data)
+            _ = sorting.quickSort(data: data)
         }
     }
     
@@ -229,7 +229,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.insertionSort(data: data)
+            _ = sorting.insertionSort(data: data)
         }
     }
     
@@ -243,7 +243,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.insertionSort(data: data)
+            _ = sorting.insertionSort(data: data)
         }
     }
     
@@ -257,7 +257,7 @@ class SortingTest: XCTestCase {
         
         //act
         measure {
-            sorting.insertionSort(data: data)
+            _ = sorting.insertionSort(data: data)
         }
     }
     
